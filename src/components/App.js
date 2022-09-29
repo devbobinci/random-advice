@@ -28,10 +28,9 @@ const App = () => {
     } else return (number = adviceNumber);
   };
 
-
   return (
     <div className="container">
-      <div className="advice__container">
+      <main className="advice__container">
         <h5 className="advice-title">
           Advice <span className="advice-number">#{parseNumber()}</span>
         </h5>
@@ -40,7 +39,7 @@ const App = () => {
         <a className="get-advice-btn" onClick={() => getData()}>
           <img src={dice} alt="dice" className="dice" />
         </a>
-      </div>
+      </main>
       <Footer />
     </div>
   );
