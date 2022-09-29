@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --quote: 28px;
+
+  --Light_Cyan: hsl(193, 38%, 86%);
+  --Neon_Green: hsl(150, 100%, 66%);
+
+  --Grayish_Blue: hsl(217, 19%, 38%);
+  --Dark_Grayish_Blue: hsl(217, 19%, 24%);
+  --Dark_Blue: hsl(218, 23%, 16%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Dark_Blue);
+  padding: 2rem 1rem;
+}
+
+.advice__container {
+  background: var(--Dark_Grayish_Blue);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 3rem 5%;
+  position: relative;
+  margin-bottom: 20%;
+  max-width: 600px;
+  min-height: 250px;
+  min-width: 350px;
+
+  .advice-title {
+    color: var(--Neon_Green);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-bottom: 2rem;
+  }
+  .advice-content {
+    font-size: var(--quote);
+    color: var(--Light_Cyan);
+    padding-bottom: 1.5rem;
+  }
+
+  .divider__container {
+    background-image: url("../project_info/images/pattern-divider-mobile.svg");
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    padding-bottom: 10%;
+    width: 100%;
+  }
+
+  .get-advice-btn {
+    background: var(--Neon_Green);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.15s;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: var(--Neon_Green) 0px 5px 15px;
+    }
+
+    .dice {
+      transition: 0.3s;
+    }
+
+    &:hover .dice {
+      scale: 1.15;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .advice__container {
+    padding: 3rem 10%;
+    .divider__container {
+      background-image: url("../project_info/images/pattern-divider-desktop.svg");
+    }
+  }
+}
+
+@media (min-width: 1092px) {
+  .advice__container {
+    margin-bottom: 0;
+    padding: 3rem 5%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #eee;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
