@@ -27,7 +27,7 @@ const App = () => {
       return (number = `0${adviceNumber}`);
     } else return (number = adviceNumber);
   };
-  // returnNumber();
+
 
   return (
     <div className="container">
